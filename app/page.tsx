@@ -76,7 +76,7 @@ const experience = [
   {
     role: "Head — Quantum Club",
     company: "Kristu Jayanti University",
-    period: "Mar 2025 – Present",
+    period: "Mar 2025 – Apr 2026",
     points: ["Leading 150+ members in workshops on emerging technologies", "Mentoring junior students on AWS, Git, and project development"]
   }
 ];
