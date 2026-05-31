@@ -99,3 +99,104 @@ section + section {
 .card-content {
   padding-left: 12px;
 }
+
+/* ── Mobile responsive ── */
+@media (max-width: 768px) {
+
+  /* Nav — hide text links on mobile */
+  nav .nav-links {
+    display: none !important;
+  }
+
+  /* Hero */
+  .hero-name {
+    font-size: clamp(40px, 12vw, 64px) !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Stats — 2x2 grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Projects — single column */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Skills — single column */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Experience */
+  .exp-header {
+    flex-direction: column !important;
+  }
+
+  /* Certs — single column */
+  .certs-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact buttons */
+  .contact-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .contact-buttons a {
+    justify-content: center !important;
+  }
+
+  /* Sections padding */
+  section {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Force single column on all grids */
+  div[style*="repeat(auto-fit"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Stack hero buttons */
+  div[style*="flex"][style*="gap: 16px"][style*="justifyContent: \"center\""] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  /* Reduce hero padding */
+  section[id="home"] {
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* Stats 2x2 */
+  div[style*="repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 60px 16px !important;
+  }
+
+  /* Nav links hide */
+  nav div[style*="gap: 32px"] {
+    display: none !important;
+  }
+}
